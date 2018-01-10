@@ -11,10 +11,10 @@ return declare( JBrowsePlugin,
     constructor: function( args ) {
         var browser = args.browser;
         console.log( "NAL_refSeq_description plugin starting" );
-        browser.afterMileStone('loadConfig'), function(deffered) {
+        browser.afterMilestone('loadConfig'), function(deffered) {
             browser.config.refSeqNameTransformer = refSeqNameTransformer;
         }
-        browser.afterMileStone('initPlugins'), function(deffered) {
+        browser.afterMilestone('initPlugins'), function(deffered) {
             browser.createNavBox = createNavBox;
         }
     },
